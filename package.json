@@ -1,0 +1,11 @@
+{
+  "name": "dagstaatje-database-server",
+  "main": "server.js",
+
+  "dependencies" : {
+    "express" : "latest",
+    "mongoose" : "latest",
+    "morgan": "latest"
+  }
+
+}
