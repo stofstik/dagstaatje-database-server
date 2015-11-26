@@ -2,8 +2,8 @@
 var mongoose = require('mongoose');
 
 var dagstaatSchema = mongoose.Schema({
-	name		: String,
-	date		: Date,
+	date		: String, // yyyy-M-d
+	shift		: Number,
 	start		: Number,
 	extra		: Number,
 	turnover	: Number,
@@ -12,7 +12,7 @@ var dagstaatSchema = mongoose.Schema({
 	out			: Number,
 	pin			: Number,
 	counted		: Number,
-	envelope	: Number,
+	envelope	: Number
 });
 
 module.exports = mongoose.model('Dagstaat', dagstaatSchema);
