@@ -2,7 +2,6 @@
 var mongoose = require('mongoose');
 
 var dagstaatSchema = mongoose.Schema({
-	date		: String, // yyyy-M-d
 	shift		: Number,
 	start		: Number,
 	extra		: Number,
