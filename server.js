@@ -1,9 +1,14 @@
 /*
  * Dagstaatje server
  *
- * TODO save the urls we're listening to, to a seperate file for readability
+ * TODO filter logic - library?
+ * TODO sort logic - library?
+ * TODO 1:00AM is still previous day
  *
- */
+ * NOTES: 
+ * We'll just save all entries to the DB
+ * When we want information about a specific date we filter accordingly
+  */
 
 var express = require('express');
 var mongoose = require('mongoose');
@@ -19,7 +24,6 @@ app.post('/newEntry/:date/:start/:extra/:turnover/:tab/:tabPaid/:out/:pin/:count
 		function respondAndSave(req, res) {
 	getAmountOfShiftsToday(req.params.date, function(amountOfShifts) {
 		var dagstaat = new Dagstaat({
-			date		: req.params.date,
 			shift		: amountOfShifts,
 			start		: req.params.start,
 			extra		: req.params.extra,
